@@ -9,14 +9,14 @@ import com.rbkmoney.damsel.domain.TokenizedBankCard;
 
 import javax.validation.constraints.NotNull;
 
+import static com.rbkmoney.mamsel.internal.Util.isNotNullOrEmpty;
+
 /**
  * Utility class to help with former BankCardTokenProvider.<br>
  * It can have values in two fields: <br>
  *  -> BankCardTokenServiceRef <br>
  *  -> LegacyBankCardTokenProvider
  */
-import static com.rbkmoney.mamsel.internal.Util.isNotNullOrEmpty;
-
 public class BankCardTokenProviderUtil {
 
     private BankCardTokenProviderUtil() {

@@ -7,8 +7,8 @@ import com.rbkmoney.damsel.domain.PaymentServiceRef;
 import com.rbkmoney.damsel.domain.PaymentMethod;
 import org.junit.jupiter.api.Test;
 
-import static com.rbkmoney.mamsel.DigitalWalletProviderUtil.getDigitalWalletName;
-import static com.rbkmoney.mamsel.DigitalWalletProviderUtil.isSetDigitalWallet;
+import static com.rbkmoney.mamsel.DigitalWalletUtil.getDigitalWalletName;
+import static com.rbkmoney.mamsel.DigitalWalletUtil.isSetDigitalWallet;
 import static com.rbkmoney.mamsel.util.TestConstants.EMPTY;
 import static com.rbkmoney.mamsel.util.TestConstants.REF;
 import static org.junit.jupiter.api.Assertions.assertEquals;

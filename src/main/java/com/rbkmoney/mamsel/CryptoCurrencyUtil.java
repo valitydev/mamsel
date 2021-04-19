@@ -9,7 +9,7 @@ import com.rbkmoney.damsel.domain.PaymentTool;
 
 import javax.validation.constraints.NotNull;
 
-import static com.rbkmoney.mamsel.internal.Util.isNotNullOrEmpty;
+import static com.rbkmoney.mamsel.Util.isEmpty;
 
 /**
  * Utility class to help with former CryptoCurrency.<br>
@@ -60,7 +60,7 @@ public class CryptoCurrencyUtil {
 
     public static String getCryptoCurrencyName(CryptoCurrencyRef cryptoCurrency,
                                                LegacyCryptoCurrency cryptoCurrencyDeprecated) {
-        if (cryptoCurrency != null && isNotNullOrEmpty(cryptoCurrency.getId())) {
+        if (cryptoCurrency != null && !isEmpty(cryptoCurrency.getId())) {
             return cryptoCurrency.getId();
         }
         if (cryptoCurrencyDeprecated != null) {

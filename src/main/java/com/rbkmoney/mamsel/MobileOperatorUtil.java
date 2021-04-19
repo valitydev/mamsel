@@ -8,7 +8,7 @@ import com.rbkmoney.damsel.domain.PaymentMethod;
 
 import javax.validation.constraints.NotNull;
 
-import static com.rbkmoney.mamsel.internal.Util.isNotNullOrEmpty;
+import static com.rbkmoney.mamsel.Util.isEmpty;
 
 /**
  * Utility class to help with former MobileOperator.<br>
@@ -48,7 +48,7 @@ public class MobileOperatorUtil {
 
     public static String getMobileOperatorName(MobileOperatorRef mobileOperatorRef,
                                                LegacyMobileOperator legacyMobileOperator) {
-        if (mobileOperatorRef != null && isNotNullOrEmpty(mobileOperatorRef.getId())) {
+        if (mobileOperatorRef != null && !isEmpty(mobileOperatorRef.getId())) {
             return mobileOperatorRef.getId();
         }
         if (legacyMobileOperator != null) {

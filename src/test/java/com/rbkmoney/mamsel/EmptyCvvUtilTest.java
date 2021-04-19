@@ -6,8 +6,8 @@ import com.rbkmoney.damsel.domain.PaymentMethod;
 import com.rbkmoney.damsel.domain.PaymentSystemRef;
 import org.junit.jupiter.api.Test;
 
-import static com.rbkmoney.mamsel.EmptyCvvBankCardUtil.getEmptyBankCardCvvName;
-import static com.rbkmoney.mamsel.EmptyCvvBankCardUtil.isSetCvvEmpty;
+import static com.rbkmoney.mamsel.EmptyCvvUtil.getEmptyBankCardCvvName;
+import static com.rbkmoney.mamsel.EmptyCvvUtil.isSetCvvEmpty;
 import static com.rbkmoney.mamsel.util.TestConstants.EMPTY;
 import static com.rbkmoney.mamsel.util.TestConstants.REF;
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -16,7 +16,7 @@ import static org.junit.jupiter.api.Assertions.assertNull;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
-class EmptyCvvBankCardUtilTest {
+class EmptyCvvUtilTest {
 
     @Test
     void getEmptyBankCardCvvNameTest_PaymentMethod() {

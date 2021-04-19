@@ -9,7 +9,7 @@ import com.rbkmoney.damsel.domain.TokenizedBankCard;
 
 import javax.validation.constraints.NotNull;
 
-import static com.rbkmoney.mamsel.internal.Util.isNotNullOrEmpty;
+import static com.rbkmoney.mamsel.Util.isEmpty;
 
 /**
  * Utility class to help with former BankCardTokenProvider.<br>
@@ -17,9 +17,9 @@ import static com.rbkmoney.mamsel.internal.Util.isNotNullOrEmpty;
  *  -> BankCardTokenServiceRef <br>
  *  -> LegacyBankCardTokenProvider
  */
-public class BankCardTokenProviderUtil {
+public class TokenProviderUtil {
 
-    private BankCardTokenProviderUtil() {
+    private TokenProviderUtil() {
     }
 
     public static String getTokenProviderName(@NotNull BankCard card) {
@@ -40,7 +40,7 @@ public class BankCardTokenProviderUtil {
 
     public static String getTokenProviderName(BankCardTokenServiceRef bankCardTokenServiceRef,
                                               LegacyBankCardTokenProvider legacyBankCardPaymentSystem) {
-        if (bankCardTokenServiceRef != null && isNotNullOrEmpty(bankCardTokenServiceRef.getId())) {
+        if (bankCardTokenServiceRef != null && !isEmpty(bankCardTokenServiceRef.getId())) {
             return bankCardTokenServiceRef.getId();
         }
         if (legacyBankCardPaymentSystem != null) {

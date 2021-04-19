@@ -8,7 +8,7 @@ import com.rbkmoney.damsel.domain.PaymentServiceRef;
 
 import javax.validation.constraints.NotNull;
 
-import static com.rbkmoney.mamsel.internal.Util.isNotNullOrEmpty;
+import static com.rbkmoney.mamsel.Util.isEmpty;
 
 /**
  * Utility class to help with former DigitalWalletProvider.<br>
@@ -16,9 +16,9 @@ import static com.rbkmoney.mamsel.internal.Util.isNotNullOrEmpty;
  *  -> PaymentServiceRef <br>
  *  -> LegacyDigitalWalletProvider
  */
-public class DigitalWalletProviderUtil {
+public class DigitalWalletUtil {
 
-    private DigitalWalletProviderUtil() {
+    private DigitalWalletUtil() {
     }
 
     public static String getDigitalWalletName(@NotNull PaymentMethod method) {
@@ -47,7 +47,7 @@ public class DigitalWalletProviderUtil {
 
     public static String getDigitalWalletName(PaymentServiceRef paymentServiceRef,
                                               LegacyDigitalWalletProvider legacyDigitalWalletProvider) {
-        if (paymentServiceRef != null && isNotNullOrEmpty(paymentServiceRef.getId())) {
+        if (paymentServiceRef != null && !isEmpty(paymentServiceRef.getId())) {
             return paymentServiceRef.getId();
         }
         if (legacyDigitalWalletProvider != null) {

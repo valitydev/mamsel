@@ -12,8 +12,8 @@ import com.rbkmoney.damsel.payment_tool_provider.CardInfo;
 import org.junit.jupiter.api.Test;
 
 
-import static com.rbkmoney.mamsel.BankCardPaymentSystemUtil.getPaymentSystemName;
-import static com.rbkmoney.mamsel.BankCardPaymentSystemUtil.isSetPaymentSystem;
+import static com.rbkmoney.mamsel.PaymentSystemUtil.getPaymentSystemName;
+import static com.rbkmoney.mamsel.PaymentSystemUtil.isSetPaymentSystem;
 import static com.rbkmoney.mamsel.util.TestConstants.EMPTY;
 import static com.rbkmoney.mamsel.util.TestConstants.REF;
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -22,7 +22,7 @@ import static org.junit.jupiter.api.Assertions.assertThrows;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 import static org.junit.jupiter.api.Assertions.assertFalse;
 
-class BankCardPaymentSystemUtilTest {
+class PaymentSystemUtilTest {
 
     @Test
     void getPaymentSystemNameTest_BankCard() {
@@ -176,93 +176,93 @@ class BankCardPaymentSystemUtilTest {
     @Test
     void isPaymentSystemSetTest_BankCard() {
         BankCard nullObj = null;
-        assertThrows(NullPointerException.class, () -> BankCardPaymentSystemUtil.isSetPaymentSystem(nullObj));
+        assertThrows(NullPointerException.class, () -> PaymentSystemUtil.isSetPaymentSystem(nullObj));
 
         BankCard card = new BankCard();
-        assertFalse(BankCardPaymentSystemUtil.isSetPaymentSystem(card));
+        assertFalse(PaymentSystemUtil.isSetPaymentSystem(card));
 
         card.setPaymentSystem(new PaymentSystemRef(REF));
-        assertTrue(BankCardPaymentSystemUtil.isSetPaymentSystem(card));
+        assertTrue(PaymentSystemUtil.isSetPaymentSystem(card));
 
         card = new BankCard();
         card.setPaymentSystemDeprecated(LegacyBankCardPaymentSystem.ebt);
-        assertTrue(BankCardPaymentSystemUtil.isSetPaymentSystem(card));
+        assertTrue(PaymentSystemUtil.isSetPaymentSystem(card));
     }
 
     @Test
     void isPaymentSystemSetTest_TokenizedBankCard() {
         TokenizedBankCard nullObj = null;
-        assertThrows(NullPointerException.class, () -> BankCardPaymentSystemUtil.isSetPaymentSystem(nullObj));
+        assertThrows(NullPointerException.class, () -> PaymentSystemUtil.isSetPaymentSystem(nullObj));
 
         TokenizedBankCard card = new TokenizedBankCard();
-        assertFalse(BankCardPaymentSystemUtil.isSetPaymentSystem(card));
+        assertFalse(PaymentSystemUtil.isSetPaymentSystem(card));
 
         card.setPaymentSystem(new PaymentSystemRef(REF));
-        assertTrue(BankCardPaymentSystemUtil.isSetPaymentSystem(card));
+        assertTrue(PaymentSystemUtil.isSetPaymentSystem(card));
 
         card = new TokenizedBankCard();
         card.setPaymentSystemDeprecated(LegacyBankCardPaymentSystem.ebt);
-        assertTrue(BankCardPaymentSystemUtil.isSetPaymentSystem(card));
+        assertTrue(PaymentSystemUtil.isSetPaymentSystem(card));
     }
 
     @Test
     void isPaymentSystemSetTest_PaymentMethod() {
         PaymentMethod nullObj = null;
-        assertThrows(NullPointerException.class, () -> BankCardPaymentSystemUtil.isSetPaymentSystem(nullObj));
+        assertThrows(NullPointerException.class, () -> PaymentSystemUtil.isSetPaymentSystem(nullObj));
 
         PaymentMethod method = new PaymentMethod();
-        assertFalse(BankCardPaymentSystemUtil.isSetPaymentSystem(method));
+        assertFalse(PaymentSystemUtil.isSetPaymentSystem(method));
 
         BankCardPaymentMethod bankCardPaymentMethod = new BankCardPaymentMethod();
         bankCardPaymentMethod.setPaymentSystem(new PaymentSystemRef(REF));
         bankCardPaymentMethod.setIsCvvEmpty(true);
         method.setBankCard(bankCardPaymentMethod);
-        assertFalse(BankCardPaymentSystemUtil.isSetPaymentSystem(method));
+        assertFalse(PaymentSystemUtil.isSetPaymentSystem(method));
 
         bankCardPaymentMethod.setIsCvvEmpty(false);
-        assertTrue(BankCardPaymentSystemUtil.isSetPaymentSystem(method));
+        assertTrue(PaymentSystemUtil.isSetPaymentSystem(method));
 
         method = new PaymentMethod();
         method.setBankCardDeprecated(LegacyBankCardPaymentSystem.uzcard);
-        assertTrue(BankCardPaymentSystemUtil.isSetPaymentSystem(method));
+        assertTrue(PaymentSystemUtil.isSetPaymentSystem(method));
     }
 
     @Test
     void isPaymentSystemSetTest_BankCardPaymentMethod() {
         BankCardPaymentMethod nullObj = null;
-        assertThrows(NullPointerException.class, () -> BankCardPaymentSystemUtil.isSetPaymentSystem(nullObj));
+        assertThrows(NullPointerException.class, () -> PaymentSystemUtil.isSetPaymentSystem(nullObj));
 
         BankCardPaymentMethod method = new BankCardPaymentMethod();
-        assertFalse(BankCardPaymentSystemUtil.isSetPaymentSystem(method));
+        assertFalse(PaymentSystemUtil.isSetPaymentSystem(method));
 
         method.setPaymentSystem(new PaymentSystemRef(REF));
-        assertTrue(BankCardPaymentSystemUtil.isSetPaymentSystem(method));
+        assertTrue(PaymentSystemUtil.isSetPaymentSystem(method));
 
         method.setIsCvvEmpty(true);
-        assertFalse(BankCardPaymentSystemUtil.isSetPaymentSystem(method));
+        assertFalse(PaymentSystemUtil.isSetPaymentSystem(method));
 
         method = new BankCardPaymentMethod();
         method.setPaymentSystemDeprecated(LegacyBankCardPaymentSystem.ebt);
-        assertTrue(BankCardPaymentSystemUtil.isSetPaymentSystem(method));
+        assertTrue(PaymentSystemUtil.isSetPaymentSystem(method));
 
         method.setIsCvvEmpty(true);
-        assertFalse(BankCardPaymentSystemUtil.isSetPaymentSystem(method));
+        assertFalse(PaymentSystemUtil.isSetPaymentSystem(method));
     }
 
     @Test
     void isPaymentSystemSetTest_CardInfo() {
         CardInfo nullObj = null;
-        assertThrows(NullPointerException.class, () -> BankCardPaymentSystemUtil.isSetPaymentSystem(nullObj));
+        assertThrows(NullPointerException.class, () -> PaymentSystemUtil.isSetPaymentSystem(nullObj));
 
         CardInfo cardInfo = new CardInfo();
-        assertFalse(BankCardPaymentSystemUtil.isSetPaymentSystem(cardInfo));
+        assertFalse(PaymentSystemUtil.isSetPaymentSystem(cardInfo));
 
         cardInfo.setPaymentSystem(new PaymentSystemRef(REF));
-        assertTrue(BankCardPaymentSystemUtil.isSetPaymentSystem(cardInfo));
+        assertTrue(PaymentSystemUtil.isSetPaymentSystem(cardInfo));
 
         cardInfo = new CardInfo();
         cardInfo.setPaymentSystemDeprecated(LegacyBankCardPaymentSystem.ebt);
-        assertTrue(BankCardPaymentSystemUtil.isSetPaymentSystem(cardInfo));
+        assertTrue(PaymentSystemUtil.isSetPaymentSystem(cardInfo));
     }
 
     @Test

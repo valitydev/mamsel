@@ -8,8 +8,8 @@ import com.rbkmoney.damsel.domain.PaymentSystemCondition;
 import com.rbkmoney.damsel.domain.TokenizedBankCard;
 import org.junit.jupiter.api.Test;
 
-import static com.rbkmoney.mamsel.BankCardTokenProviderUtil.getTokenProviderName;
-import static com.rbkmoney.mamsel.BankCardTokenProviderUtil.isSetTokenProvider;
+import static com.rbkmoney.mamsel.TokenProviderUtil.getTokenProviderName;
+import static com.rbkmoney.mamsel.TokenProviderUtil.isSetTokenProvider;
 import static com.rbkmoney.mamsel.util.TestConstants.EMPTY;
 import static com.rbkmoney.mamsel.util.TestConstants.REF;
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -18,98 +18,98 @@ import static org.junit.jupiter.api.Assertions.assertThrows;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 import static org.junit.jupiter.api.Assertions.assertFalse;
 
-class BankCardTokenProviderUtilTest {
+class TokenProviderUtilTest {
 
     @Test
     void getTokenProviderNameTest_BankCard() {
         BankCard nullCard = null;
-        assertThrows(NullPointerException.class, () -> BankCardTokenProviderUtil.getTokenProviderName(nullCard));
+        assertThrows(NullPointerException.class, () -> TokenProviderUtil.getTokenProviderName(nullCard));
 
         BankCard card = new BankCard();
-        assertNull(BankCardTokenProviderUtil.getTokenProviderName(card));
+        assertNull(TokenProviderUtil.getTokenProviderName(card));
 
         card.setPaymentToken(new BankCardTokenServiceRef(REF));
-        assertEquals(REF, BankCardTokenProviderUtil.getTokenProviderName(card));
+        assertEquals(REF, TokenProviderUtil.getTokenProviderName(card));
 
         card.setPaymentToken(null);
         card.setTokenProviderDeprecated(LegacyBankCardTokenProvider.yandexpay);
         assertEquals(
                 LegacyBankCardTokenProvider.yandexpay.name(),
-                BankCardTokenProviderUtil.getTokenProviderName(card)
+                TokenProviderUtil.getTokenProviderName(card)
         );
 
         card.setPaymentToken(new BankCardTokenServiceRef(REF));
         card.setTokenProviderDeprecated(LegacyBankCardTokenProvider.yandexpay);
-        assertEquals(REF, BankCardTokenProviderUtil.getTokenProviderName(card));
+        assertEquals(REF, TokenProviderUtil.getTokenProviderName(card));
     }
 
     @Test
     void getTokenProviderNameTest_TokenizedBankCard() {
         TokenizedBankCard nullCard = null;
-        assertThrows(NullPointerException.class, () -> BankCardTokenProviderUtil.getTokenProviderName(nullCard));
+        assertThrows(NullPointerException.class, () -> TokenProviderUtil.getTokenProviderName(nullCard));
 
         TokenizedBankCard card = new TokenizedBankCard();
-        assertNull(BankCardTokenProviderUtil.getTokenProviderName(card));
+        assertNull(TokenProviderUtil.getTokenProviderName(card));
 
         card.setPaymentToken(new BankCardTokenServiceRef(REF));
-        assertEquals(REF, BankCardTokenProviderUtil.getTokenProviderName(card));
+        assertEquals(REF, TokenProviderUtil.getTokenProviderName(card));
 
         card.setPaymentToken(null);
         card.setTokenProviderDeprecated(LegacyBankCardTokenProvider.yandexpay);
         assertEquals(
                 LegacyBankCardTokenProvider.yandexpay.name(),
-                BankCardTokenProviderUtil.getTokenProviderName(card)
+                TokenProviderUtil.getTokenProviderName(card)
         );
 
         card.setPaymentToken(new BankCardTokenServiceRef(REF));
         card.setTokenProviderDeprecated(LegacyBankCardTokenProvider.yandexpay);
-        assertEquals(REF, BankCardTokenProviderUtil.getTokenProviderName(card));
+        assertEquals(REF, TokenProviderUtil.getTokenProviderName(card));
     }
 
     @Test
     void getTokenProviderNameTest_BankCardPaymentMethod() {
         BankCardPaymentMethod nullMethod = null;
-        assertThrows(NullPointerException.class, () -> BankCardTokenProviderUtil.getTokenProviderName(nullMethod));
+        assertThrows(NullPointerException.class, () -> TokenProviderUtil.getTokenProviderName(nullMethod));
 
         BankCardPaymentMethod method = new BankCardPaymentMethod();
-        assertNull(BankCardTokenProviderUtil.getTokenProviderName(method));
+        assertNull(TokenProviderUtil.getTokenProviderName(method));
 
         method.setPaymentToken(new BankCardTokenServiceRef(REF));
-        assertEquals(REF, BankCardTokenProviderUtil.getTokenProviderName(method));
+        assertEquals(REF, TokenProviderUtil.getTokenProviderName(method));
 
         method.setPaymentToken(null);
         method.setTokenProviderDeprecated(LegacyBankCardTokenProvider.yandexpay);
         assertEquals(
                 LegacyBankCardTokenProvider.yandexpay.name(),
-                BankCardTokenProviderUtil.getTokenProviderName(method)
+                TokenProviderUtil.getTokenProviderName(method)
         );
 
         method.setPaymentToken(new BankCardTokenServiceRef(REF));
         method.setTokenProviderDeprecated(LegacyBankCardTokenProvider.yandexpay);
-        assertEquals(REF, BankCardTokenProviderUtil.getTokenProviderName(method));
+        assertEquals(REF, TokenProviderUtil.getTokenProviderName(method));
     }
 
     @Test
     void getTokenProviderNameTest_PaymentSystemCondition() {
         PaymentSystemCondition nullCondition = null;
-        assertThrows(NullPointerException.class, () -> BankCardTokenProviderUtil.getTokenProviderName(nullCondition));
+        assertThrows(NullPointerException.class, () -> TokenProviderUtil.getTokenProviderName(nullCondition));
 
         PaymentSystemCondition condition = new PaymentSystemCondition();
-        assertNull(BankCardTokenProviderUtil.getTokenProviderName(condition));
+        assertNull(TokenProviderUtil.getTokenProviderName(condition));
 
         condition.setTokenServiceIs(new BankCardTokenServiceRef(REF));
-        assertEquals(REF, BankCardTokenProviderUtil.getTokenProviderName(condition));
+        assertEquals(REF, TokenProviderUtil.getTokenProviderName(condition));
 
         condition.setTokenServiceIs(null);
         condition.setTokenProviderIsDeprecated(LegacyBankCardTokenProvider.yandexpay);
         assertEquals(
                 LegacyBankCardTokenProvider.yandexpay.name(),
-                BankCardTokenProviderUtil.getTokenProviderName(condition)
+                TokenProviderUtil.getTokenProviderName(condition)
         );
 
         condition.setTokenServiceIs(new BankCardTokenServiceRef(REF));
         condition.setTokenProviderIsDeprecated(LegacyBankCardTokenProvider.yandexpay);
-        assertEquals(REF, BankCardTokenProviderUtil.getTokenProviderName(condition));
+        assertEquals(REF, TokenProviderUtil.getTokenProviderName(condition));
     }
 
     @Test

@@ -7,8 +7,8 @@ import com.rbkmoney.damsel.domain.PaymentTerminal;
 import com.rbkmoney.damsel.domain.PaymentTerminalConditionDefinition;
 import org.junit.jupiter.api.Test;
 
-import static com.rbkmoney.mamsel.TerminalPaymentProviderUtil.getTerminalPaymentProviderName;
-import static com.rbkmoney.mamsel.TerminalPaymentProviderUtil.isSetTerminalPaymentProvider;
+import static com.rbkmoney.mamsel.TerminalPaymentUtil.getTerminalPaymentProviderName;
+import static com.rbkmoney.mamsel.TerminalPaymentUtil.isSetTerminalPaymentProvider;
 import static com.rbkmoney.mamsel.util.TestConstants.EMPTY;
 import static com.rbkmoney.mamsel.util.TestConstants.REF;
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -18,7 +18,7 @@ import static org.junit.jupiter.api.Assertions.assertThrows;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 
-class TerminalPaymentProviderUtilTest {
+class TerminalPaymentUtilTest {
 
     @Test
     void getTerminalPaymentProviderNameTest_PaymentMethod() {

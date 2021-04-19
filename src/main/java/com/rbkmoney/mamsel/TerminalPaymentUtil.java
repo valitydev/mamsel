@@ -6,7 +6,7 @@ import com.rbkmoney.damsel.domain.PaymentServiceRef;
 import com.rbkmoney.damsel.domain.PaymentTerminal;
 import com.rbkmoney.damsel.domain.PaymentTerminalConditionDefinition;
 
-import static com.rbkmoney.mamsel.internal.Util.isNotNullOrEmpty;
+import static com.rbkmoney.mamsel.Util.isEmpty;
 
 /**
  * Utility class to help with former TerminalPaymentProvider.<br>
@@ -14,9 +14,9 @@ import static com.rbkmoney.mamsel.internal.Util.isNotNullOrEmpty;
  *  -> PaymentServiceRef <br>
  *  -> LegacyTerminalPaymentProvider
  */
-public class TerminalPaymentProviderUtil {
+public class TerminalPaymentUtil {
 
-    private TerminalPaymentProviderUtil() {
+    private TerminalPaymentUtil() {
     }
 
     public static String getTerminalPaymentProviderName(PaymentMethod method) {
@@ -45,7 +45,7 @@ public class TerminalPaymentProviderUtil {
 
     public static String getTerminalPaymentProviderName(PaymentServiceRef paymentServiceRef,
                                                         LegacyTerminalPaymentProvider legacyTerminalPaymentProvider) {
-        if (paymentServiceRef != null && isNotNullOrEmpty(paymentServiceRef.getId())) {
+        if (paymentServiceRef != null && !isEmpty(paymentServiceRef.getId())) {
             return paymentServiceRef.getId();
         }
         if (legacyTerminalPaymentProvider != null) {

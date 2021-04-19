@@ -11,7 +11,7 @@ import com.rbkmoney.damsel.payment_tool_provider.CardInfo;
 
 import javax.validation.constraints.NotNull;
 
-import static com.rbkmoney.mamsel.internal.Util.isNotNullOrEmpty;
+import static com.rbkmoney.mamsel.Util.isEmpty;
 
 /**
  * Utility class to help with former BankCardPaymentSystem.<br>
@@ -19,9 +19,9 @@ import static com.rbkmoney.mamsel.internal.Util.isNotNullOrEmpty;
  *  -> PaymentSystemRef <br>
  *  -> LegacyBankCardPaymentSystem
  */
-public class BankCardPaymentSystemUtil {
+public class PaymentSystemUtil {
 
-    private BankCardPaymentSystemUtil() {
+    private PaymentSystemUtil() {
     }
 
     public static String getPaymentSystemName(@NotNull PaymentMethod method) {
@@ -60,7 +60,7 @@ public class BankCardPaymentSystemUtil {
 
     public static String getPaymentSystemName(PaymentSystemRef paymentSystemRef,
                                               LegacyBankCardPaymentSystem legacyBankCardPaymentSystem) {
-        if (paymentSystemRef != null && isNotNullOrEmpty(paymentSystemRef.getId())) {
+        if (paymentSystemRef != null && !isEmpty(paymentSystemRef.getId())) {
             return paymentSystemRef.getId();
         }
         if (legacyBankCardPaymentSystem != null) {

@@ -7,7 +7,7 @@ import com.rbkmoney.damsel.domain.PaymentSystemRef;
 
 import javax.validation.constraints.NotNull;
 
-import static com.rbkmoney.mamsel.internal.Util.isNotNullOrEmpty;
+import static com.rbkmoney.mamsel.Util.isEmpty;
 
 /**
  * Utility class to help with former BankCardPaymentSystem (empty_cvv).<br>
@@ -15,9 +15,9 @@ import static com.rbkmoney.mamsel.internal.Util.isNotNullOrEmpty;
  *  -> PaymentSystemRef <br>
  *  -> LegacyBankCardPaymentSystem
  */
-public class EmptyCvvBankCardUtil {
+public class EmptyCvvUtil {
 
-    private EmptyCvvBankCardUtil() {
+    private EmptyCvvUtil() {
     }
 
     public static String getEmptyBankCardCvvName(@NotNull PaymentMethod method) {
@@ -40,7 +40,7 @@ public class EmptyCvvBankCardUtil {
 
     public static String getEmptyBankCardCvvName(PaymentSystemRef paymentSystemRef,
                                                   LegacyBankCardPaymentSystem legacyBankCardPaymentSystem) {
-        if (paymentSystemRef != null && isNotNullOrEmpty(paymentSystemRef.getId())) {
+        if (paymentSystemRef != null && !isEmpty(paymentSystemRef.getId())) {
             return paymentSystemRef.getId();
         }
         if (legacyBankCardPaymentSystem != null) {

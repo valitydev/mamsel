@@ -17,6 +17,9 @@ import static com.rbkmoney.mamsel.internal.Util.isNotNullOrEmpty;
  */
 public class EmptyCvvBankCardUtil {
 
+    private EmptyCvvBankCardUtil() {
+    }
+
     public static String getEmptyBankCardCvvName(@NotNull PaymentMethod method) {
         if (method.isSetBankCard() && method.getBankCard().isIsCvvEmpty()) {
             return method.getBankCard().getPaymentSystem().getId();

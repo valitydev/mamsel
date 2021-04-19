@@ -70,27 +70,27 @@ public class BankCardPaymentSystemUtil {
         return null;
     }
 
-    public static boolean isPaymentSystemSet(@NotNull BankCard card) {
+    public static boolean isSetPaymentSystem(@NotNull BankCard card) {
         return card.isSetPaymentSystem() || card.isSetPaymentSystemDeprecated();
     }
 
-    public static boolean isPaymentSystemSet(@NotNull TokenizedBankCard card) {
+    public static boolean isSetPaymentSystem(@NotNull TokenizedBankCard card) {
         return card.isSetPaymentSystem() || card.isSetPaymentSystemDeprecated();
     }
 
-    public static boolean isPaymentSystemSet(@NotNull PaymentMethod method) {
+    public static boolean isSetPaymentSystem(@NotNull PaymentMethod method) {
         return (method.isSetBankCard() && !method.getBankCard().isIsCvvEmpty()) || method.isSetBankCardDeprecated();
     }
 
-    public static boolean isPaymentSystemSet(@NotNull BankCardPaymentMethod method) {
+    public static boolean isSetPaymentSystem(@NotNull BankCardPaymentMethod method) {
         return !method.isIsCvvEmpty() && (method.isSetPaymentSystem() || method.isSetPaymentSystemDeprecated());
     }
 
-    public static boolean isPaymentSystemSet(@NotNull CardInfo cardInfo) {
+    public static boolean isSetPaymentSystem(@NotNull CardInfo cardInfo) {
         return cardInfo.isSetPaymentSystem() || cardInfo.isSetPaymentSystemDeprecated();
     }
 
-    public static boolean isPaymentSystemSet(@NotNull PaymentSystemCondition condition) {
+    public static boolean isSetPaymentSystem(@NotNull PaymentSystemCondition condition) {
         return condition.isSetPaymentSystemIs() || condition.isSetPaymentSystemIsDeprecated();
     }
 

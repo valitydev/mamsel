@@ -11,7 +11,7 @@
     </parent>
 
     <artifactId>mamsel</artifactId>
-    <version>0.0.2</version>
+    <version>0.1.0</version>
     <packaging>jar</packaging>
 
     <description>utility lib to help with damsel migration</description>
@@ -37,7 +37,7 @@
         <dependency>
             <groupId>com.rbkmoney</groupId>
             <artifactId>damsel</artifactId>
-            <version>1.489-8851c24</version>
+            <version>1.496-cc2875b</version>
             <scope>provided</scope>
         </dependency>
         <dependency>

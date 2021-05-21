@@ -23,6 +23,10 @@ public class PaymentSystemUtil {
         return getPaymentSystemName(bankCard.getPaymentSystem(), bankCard.getPaymentSystemDeprecated());
     }
 
+    public static String getPaymentSystemName(@NotNull com.rbkmoney.damsel.merch_stat.BankCard bankCard) {
+        return getPaymentSystemName(bankCard.getPaymentSystem(), bankCard.getPaymentSystemDeprecated());
+    }
+
     public static String getPaymentSystemName(@NotNull CardInfo cardInfo) {
         return getPaymentSystemName(cardInfo.getPaymentSystem(), cardInfo.getPaymentSystemDeprecated());
     }

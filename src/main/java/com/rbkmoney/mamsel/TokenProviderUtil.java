@@ -22,6 +22,10 @@ public class TokenProviderUtil {
         return getTokenProviderName(bankCard.getPaymentToken(), bankCard.getTokenProviderDeprecated());
     }
 
+    public static String getTokenProviderName(@NotNull com.rbkmoney.damsel.merch_stat.BankCard bankCard) {
+        return getTokenProviderName(bankCard.getPaymentToken(), bankCard.getTokenProviderDeprecated());
+    }
+
     public static String getTokenProviderName(
             BankCardTokenServiceRef bankCardTokenServiceRef,
             LegacyBankCardTokenProvider legacyBankCardTokenProvider) {

@@ -1,8 +1,8 @@
 package com.rbkmoney.mamsel;
 
-import com.rbkmoney.damsel.domain.LegacyTerminalPaymentProvider;
-import com.rbkmoney.damsel.domain.PaymentServiceRef;
-import com.rbkmoney.damsel.domain.PaymentTerminal;
+import dev.vality.damsel.domain.LegacyTerminalPaymentProvider;
+import dev.vality.damsel.domain.PaymentServiceRef;
+import dev.vality.damsel.domain.PaymentTerminal;
 import org.junit.jupiter.api.Test;
 
 import static com.rbkmoney.mamsel.TerminalPaymentUtil.getTerminalPaymentProviderName;

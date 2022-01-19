@@ -1,8 +1,8 @@
 package com.rbkmoney.mamsel;
 
-import com.rbkmoney.damsel.domain.DigitalWallet;
-import com.rbkmoney.damsel.domain.LegacyDigitalWalletProvider;
-import com.rbkmoney.damsel.domain.PaymentServiceRef;
+import dev.vality.damsel.domain.DigitalWallet;
+import dev.vality.damsel.domain.LegacyDigitalWalletProvider;
+import dev.vality.damsel.domain.PaymentServiceRef;
 import org.junit.jupiter.api.Test;
 
 import static com.rbkmoney.mamsel.DigitalWalletUtil.getDigitalWalletName;

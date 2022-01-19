@@ -1,8 +1,8 @@
 package com.rbkmoney.mamsel;
 
-import com.rbkmoney.damsel.domain.BankCard;
-import com.rbkmoney.damsel.domain.BankCardTokenServiceRef;
-import com.rbkmoney.damsel.domain.LegacyBankCardTokenProvider;
+import dev.vality.damsel.domain.BankCard;
+import dev.vality.damsel.domain.BankCardTokenServiceRef;
+import dev.vality.damsel.domain.LegacyBankCardTokenProvider;
 import org.junit.jupiter.api.Test;
 
 import static com.rbkmoney.mamsel.TokenProviderUtil.getTokenProviderName;

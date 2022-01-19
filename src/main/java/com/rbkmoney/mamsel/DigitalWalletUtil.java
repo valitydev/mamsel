@@ -1,8 +1,8 @@
 package com.rbkmoney.mamsel;
 
-import com.rbkmoney.damsel.domain.DigitalWallet;
-import com.rbkmoney.damsel.domain.LegacyDigitalWalletProvider;
-import com.rbkmoney.damsel.domain.PaymentServiceRef;
+import dev.vality.damsel.domain.DigitalWallet;
+import dev.vality.damsel.domain.LegacyDigitalWalletProvider;
+import dev.vality.damsel.domain.PaymentServiceRef;
 
 import javax.validation.constraints.NotNull;
 import java.util.Optional;

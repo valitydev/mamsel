@@ -1,9 +1,9 @@
 package com.rbkmoney.mamsel;
 
-import com.rbkmoney.damsel.domain.CryptoCurrencyRef;
-import com.rbkmoney.damsel.domain.CryptoWallet;
-import com.rbkmoney.damsel.domain.LegacyCryptoCurrency;
-import com.rbkmoney.damsel.domain.PaymentTool;
+import dev.vality.damsel.domain.CryptoCurrencyRef;
+import dev.vality.damsel.domain.CryptoWallet;
+import dev.vality.damsel.domain.LegacyCryptoCurrency;
+import dev.vality.damsel.domain.PaymentTool;
 
 import javax.validation.constraints.NotNull;
 import java.util.Optional;

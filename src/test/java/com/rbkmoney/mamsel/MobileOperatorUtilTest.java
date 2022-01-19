@@ -1,8 +1,8 @@
 package com.rbkmoney.mamsel;
 
-import com.rbkmoney.damsel.domain.LegacyMobileOperator;
-import com.rbkmoney.damsel.domain.MobileCommerce;
-import com.rbkmoney.damsel.domain.MobileOperatorRef;
+import dev.vality.damsel.domain.LegacyMobileOperator;
+import dev.vality.damsel.domain.MobileCommerce;
+import dev.vality.damsel.domain.MobileOperatorRef;
 import org.junit.jupiter.api.Test;
 
 import static com.rbkmoney.mamsel.MobileOperatorUtil.getMobileOperatorName;

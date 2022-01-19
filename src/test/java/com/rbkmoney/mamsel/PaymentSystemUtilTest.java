@@ -1,12 +1,11 @@
 package com.rbkmoney.mamsel;
 
-import com.rbkmoney.damsel.domain.BankCard;
-import com.rbkmoney.damsel.domain.LegacyBankCardPaymentSystem;
-import com.rbkmoney.damsel.domain.PaymentSystemRef;
-import com.rbkmoney.damsel.payment_tool_provider.CardInfo;
+import dev.vality.damsel.domain.BankCard;
+import dev.vality.damsel.domain.LegacyBankCardPaymentSystem;
+import dev.vality.damsel.domain.PaymentSystemRef;
+import dev.vality.damsel.payment_tool_provider.CardInfo;
 import org.junit.jupiter.api.Test;
 
-import static com.rbkmoney.mamsel.PaymentSystemUtil.getFistfulPaymentSystemName;
 import static com.rbkmoney.mamsel.PaymentSystemUtil.getPaymentSystemName;
 import static com.rbkmoney.mamsel.util.TestConstants.EMPTY;
 import static com.rbkmoney.mamsel.util.TestConstants.REF;
@@ -84,35 +83,35 @@ class PaymentSystemUtilTest {
     @Test
     void getFistfulPaymentSystemNameTest() {
         assertNull(PaymentSystemUtil.getFistfulPaymentSystemName(null, null));
-        assertNull(PaymentSystemUtil.getFistfulPaymentSystemName(new com.rbkmoney.fistful.base.PaymentSystemRef(),
+        assertNull(PaymentSystemUtil.getFistfulPaymentSystemName(new dev.vality.fistful.base.PaymentSystemRef(),
                 null));
         assertNull(PaymentSystemUtil
-                .getFistfulPaymentSystemName(new com.rbkmoney.fistful.base.PaymentSystemRef(EMPTY),
+                .getFistfulPaymentSystemName(new dev.vality.fistful.base.PaymentSystemRef(EMPTY),
                         null));
         assertEquals(
                 REF,
-                PaymentSystemUtil.getFistfulPaymentSystemName(new com.rbkmoney.fistful.base.PaymentSystemRef(REF),
+                PaymentSystemUtil.getFistfulPaymentSystemName(new dev.vality.fistful.base.PaymentSystemRef(REF),
                         null)
         );
         assertEquals(
                 REF,
-                PaymentSystemUtil.getFistfulPaymentSystemName(new com.rbkmoney.fistful.base.PaymentSystemRef(REF),
-                        com.rbkmoney.fistful.base.LegacyBankCardPaymentSystem.ebt)
+                PaymentSystemUtil.getFistfulPaymentSystemName(new dev.vality.fistful.base.PaymentSystemRef(REF),
+                        dev.vality.fistful.base.LegacyBankCardPaymentSystem.ebt)
         );
         assertEquals(
                 LegacyBankCardPaymentSystem.ebt.name(),
                 PaymentSystemUtil.getFistfulPaymentSystemName(null,
-                        com.rbkmoney.fistful.base.LegacyBankCardPaymentSystem.ebt)
+                        dev.vality.fistful.base.LegacyBankCardPaymentSystem.ebt)
         );
         assertEquals(
                 LegacyBankCardPaymentSystem.ebt.name(),
-                PaymentSystemUtil.getFistfulPaymentSystemName(new com.rbkmoney.fistful.base.PaymentSystemRef(),
-                        com.rbkmoney.fistful.base.LegacyBankCardPaymentSystem.ebt)
+                PaymentSystemUtil.getFistfulPaymentSystemName(new dev.vality.fistful.base.PaymentSystemRef(),
+                        dev.vality.fistful.base.LegacyBankCardPaymentSystem.ebt)
         );
         assertEquals(
                 LegacyBankCardPaymentSystem.ebt.name(),
-                PaymentSystemUtil.getFistfulPaymentSystemName(new com.rbkmoney.fistful.base.PaymentSystemRef(EMPTY),
-                        com.rbkmoney.fistful.base.LegacyBankCardPaymentSystem.ebt)
+                PaymentSystemUtil.getFistfulPaymentSystemName(new dev.vality.fistful.base.PaymentSystemRef(EMPTY),
+                        dev.vality.fistful.base.LegacyBankCardPaymentSystem.ebt)
         );
     }
 }

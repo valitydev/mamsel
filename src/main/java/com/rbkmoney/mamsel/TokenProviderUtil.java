@@ -1,8 +1,8 @@
 package com.rbkmoney.mamsel;
 
-import com.rbkmoney.damsel.domain.BankCard;
-import com.rbkmoney.damsel.domain.BankCardTokenServiceRef;
-import com.rbkmoney.damsel.domain.LegacyBankCardTokenProvider;
+import dev.vality.damsel.domain.BankCard;
+import dev.vality.damsel.domain.BankCardTokenServiceRef;
+import dev.vality.damsel.domain.LegacyBankCardTokenProvider;
 
 import javax.validation.constraints.NotNull;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public class TokenProviderUtil {
         return getTokenProviderName(bankCard.getPaymentToken(), bankCard.getTokenProviderDeprecated());
     }
 
-    public static String getTokenProviderName(@NotNull com.rbkmoney.damsel.merch_stat.BankCard bankCard) {
+    public static String getTokenProviderName(@NotNull dev.vality.damsel.merch_stat.BankCard bankCard) {
         return getTokenProviderName(bankCard.getPaymentToken(), bankCard.getTokenProviderDeprecated());
     }
 

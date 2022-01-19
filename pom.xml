@@ -5,9 +5,9 @@
     <modelVersion>4.0.0</modelVersion>
 
     <parent>
-        <groupId>com.rbkmoney</groupId>
+        <groupId>dev.vality</groupId>
         <artifactId>library-parent-pom</artifactId>
-        <version>1.0.3</version>
+        <version>1.0.0</version>
     </parent>
 
     <artifactId>mamsel</artifactId>
@@ -33,23 +33,23 @@
 
     <dependencies>
 
-        <!--RBK libs-->
+        <!--vality.dev libs-->
         <dependency>
-            <groupId>com.rbkmoney</groupId>
+            <groupId>dev.vality</groupId>
             <artifactId>damsel</artifactId>
-            <version>1.496-cc2875b</version>
+            <version>1.538-5addc41</version>
             <scope>provided</scope>
         </dependency>
         <dependency>
-            <groupId>com.rbkmoney.woody</groupId>
+            <groupId>dev.vality.woody</groupId>
             <artifactId>woody-thrift</artifactId>
-            <version>1.1.22</version>
+            <version>1.0.3</version>
             <scope>provided</scope>
         </dependency>
         <dependency>
-            <groupId>com.rbkmoney</groupId>
+            <groupId>dev.vality</groupId>
             <artifactId>fistful-proto</artifactId>
-            <version>1.122-54ee04e</version>
+            <version>1.132-ef0d767</version>
             <scope>provided</scope>
         </dependency>
 

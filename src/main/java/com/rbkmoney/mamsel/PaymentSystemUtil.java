@@ -1,9 +1,9 @@
 package com.rbkmoney.mamsel;
 
-import com.rbkmoney.damsel.domain.BankCard;
-import com.rbkmoney.damsel.domain.LegacyBankCardPaymentSystem;
-import com.rbkmoney.damsel.domain.PaymentSystemRef;
-import com.rbkmoney.damsel.payment_tool_provider.CardInfo;
+import dev.vality.damsel.domain.BankCard;
+import dev.vality.damsel.domain.LegacyBankCardPaymentSystem;
+import dev.vality.damsel.domain.PaymentSystemRef;
+import dev.vality.damsel.payment_tool_provider.CardInfo;
 
 import javax.validation.constraints.NotNull;
 import java.util.Optional;
@@ -23,7 +23,7 @@ public class PaymentSystemUtil {
         return getPaymentSystemName(bankCard.getPaymentSystem(), bankCard.getPaymentSystemDeprecated());
     }
 
-    public static String getPaymentSystemName(@NotNull com.rbkmoney.damsel.merch_stat.BankCard bankCard) {
+    public static String getPaymentSystemName(@NotNull dev.vality.damsel.merch_stat.BankCard bankCard) {
         return getPaymentSystemName(bankCard.getPaymentSystem(), bankCard.getPaymentSystemDeprecated());
     }
 
@@ -38,23 +38,23 @@ public class PaymentSystemUtil {
                 .orElse(null);
     }
 
-    public static String getFistfulPaymentSystemName(@NotNull com.rbkmoney.fistful.base.BankCard bankCard) {
+    public static String getFistfulPaymentSystemName(@NotNull dev.vality.fistful.base.BankCard bankCard) {
         return getFistfulPaymentSystemName(bankCard.getPaymentSystem(), bankCard.getPaymentSystemDeprecated());
     }
 
     public static String getFistfulPaymentSystemName(
-            com.rbkmoney.fistful.base.PaymentSystemRef paymentSystemRef,
-            com.rbkmoney.fistful.base.LegacyBankCardPaymentSystem legacyBankCardPaymentSystem) {
+            dev.vality.fistful.base.PaymentSystemRef paymentSystemRef,
+            dev.vality.fistful.base.LegacyBankCardPaymentSystem legacyBankCardPaymentSystem) {
         return getFistfulPaymentSystemNameIfPresent(paymentSystemRef, legacyBankCardPaymentSystem)
                 .orElse(null);
     }
 
     public static Optional<String> getFistfulPaymentSystemNameIfPresent(
-            com.rbkmoney.fistful.base.PaymentSystemRef paymentSystemRef,
-            com.rbkmoney.fistful.base.LegacyBankCardPaymentSystem legacyBankCardPaymentSystem) {
+            dev.vality.fistful.base.PaymentSystemRef paymentSystemRef,
+            dev.vality.fistful.base.LegacyBankCardPaymentSystem legacyBankCardPaymentSystem) {
         return OptionalExtension.isPresentOr(
                 () -> Optional.ofNullable(paymentSystemRef)
-                        .map(com.rbkmoney.fistful.base.PaymentSystemRef::getId)
+                        .map(dev.vality.fistful.base.PaymentSystemRef::getId)
                         .filter(Predicate.not(StringUtils::isEmpty)),
                 () -> Optional.ofNullable(legacyBankCardPaymentSystem)
                         .map(Enum::name)

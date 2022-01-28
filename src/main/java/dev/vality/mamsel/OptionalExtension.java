@@ -1,4 +1,4 @@
-package com.rbkmoney.mamsel;
+package dev.vality.mamsel;
 
 import java.util.Objects;
 import java.util.Optional;

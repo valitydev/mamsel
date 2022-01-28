@@ -1,4 +1,4 @@
-package com.rbkmoney.mamsel;
+package dev.vality.mamsel;
 
 import dev.vality.damsel.domain.BankCard;
 import dev.vality.damsel.domain.LegacyBankCardPaymentSystem;
@@ -6,9 +6,9 @@ import dev.vality.damsel.domain.PaymentSystemRef;
 import dev.vality.damsel.payment_tool_provider.CardInfo;
 import org.junit.jupiter.api.Test;
 
-import static com.rbkmoney.mamsel.PaymentSystemUtil.getPaymentSystemName;
-import static com.rbkmoney.mamsel.util.TestConstants.EMPTY;
-import static com.rbkmoney.mamsel.util.TestConstants.REF;
+import static dev.vality.mamsel.PaymentSystemUtil.getPaymentSystemName;
+import static dev.vality.mamsel.util.TestConstants.EMPTY;
+import static dev.vality.mamsel.util.TestConstants.REF;
 import static org.junit.jupiter.api.Assertions.*;
 
 class PaymentSystemUtilTest {

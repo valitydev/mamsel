@@ -1,13 +1,13 @@
-package com.rbkmoney.mamsel;
+package dev.vality.mamsel;
 
 import dev.vality.damsel.domain.BankCard;
 import dev.vality.damsel.domain.BankCardTokenServiceRef;
 import dev.vality.damsel.domain.LegacyBankCardTokenProvider;
 import org.junit.jupiter.api.Test;
 
-import static com.rbkmoney.mamsel.TokenProviderUtil.getTokenProviderName;
-import static com.rbkmoney.mamsel.util.TestConstants.EMPTY;
-import static com.rbkmoney.mamsel.util.TestConstants.REF;
+import static dev.vality.mamsel.TokenProviderUtil.getTokenProviderName;
+import static dev.vality.mamsel.util.TestConstants.EMPTY;
+import static dev.vality.mamsel.util.TestConstants.REF;
 import static org.junit.jupiter.api.Assertions.*;
 
 class TokenProviderUtilTest {

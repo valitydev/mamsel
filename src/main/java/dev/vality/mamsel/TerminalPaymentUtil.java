@@ -1,4 +1,4 @@
-package com.rbkmoney.mamsel;
+package dev.vality.mamsel;
 
 import dev.vality.damsel.domain.LegacyTerminalPaymentProvider;
 import dev.vality.damsel.domain.PaymentServiceRef;

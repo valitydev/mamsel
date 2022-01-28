@@ -1,4 +1,4 @@
-package com.rbkmoney.mamsel;
+package dev.vality.mamsel;
 
 import dev.vality.damsel.domain.LegacyMobileOperator;
 import dev.vality.damsel.domain.MobileCommerce;

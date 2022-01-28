@@ -1,4 +1,4 @@
-package com.rbkmoney.mamsel.util;
+package dev.vality.mamsel.util;
 
 public class TestConstants {
 

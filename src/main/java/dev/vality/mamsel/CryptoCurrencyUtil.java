@@ -1,4 +1,4 @@
-package com.rbkmoney.mamsel;
+package dev.vality.mamsel;
 
 import dev.vality.damsel.domain.CryptoCurrencyRef;
 import dev.vality.damsel.domain.CryptoWallet;

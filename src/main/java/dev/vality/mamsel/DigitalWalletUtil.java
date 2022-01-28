@@ -1,4 +1,4 @@
-package com.rbkmoney.mamsel;
+package dev.vality.mamsel;
 
 import dev.vality.damsel.domain.DigitalWallet;
 import dev.vality.damsel.domain.LegacyDigitalWalletProvider;

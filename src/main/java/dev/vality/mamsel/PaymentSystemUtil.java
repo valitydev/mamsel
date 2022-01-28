@@ -1,4 +1,4 @@
-package com.rbkmoney.mamsel;
+package dev.vality.mamsel;
 
 import dev.vality.damsel.domain.BankCard;
 import dev.vality.damsel.domain.LegacyBankCardPaymentSystem;

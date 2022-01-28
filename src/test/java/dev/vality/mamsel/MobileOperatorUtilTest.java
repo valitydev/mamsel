@@ -1,13 +1,13 @@
-package com.rbkmoney.mamsel;
+package dev.vality.mamsel;
 
 import dev.vality.damsel.domain.LegacyMobileOperator;
 import dev.vality.damsel.domain.MobileCommerce;
 import dev.vality.damsel.domain.MobileOperatorRef;
 import org.junit.jupiter.api.Test;
 
-import static com.rbkmoney.mamsel.MobileOperatorUtil.getMobileOperatorName;
-import static com.rbkmoney.mamsel.util.TestConstants.EMPTY;
-import static com.rbkmoney.mamsel.util.TestConstants.REF;
+import static dev.vality.mamsel.MobileOperatorUtil.getMobileOperatorName;
+import static dev.vality.mamsel.util.TestConstants.EMPTY;
+import static dev.vality.mamsel.util.TestConstants.REF;
 import static org.junit.jupiter.api.Assertions.*;
 
 class MobileOperatorUtilTest {

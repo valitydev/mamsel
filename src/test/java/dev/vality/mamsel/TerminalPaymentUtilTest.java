@@ -1,13 +1,13 @@
-package com.rbkmoney.mamsel;
+package dev.vality.mamsel;
 
 import dev.vality.damsel.domain.LegacyTerminalPaymentProvider;
 import dev.vality.damsel.domain.PaymentServiceRef;
 import dev.vality.damsel.domain.PaymentTerminal;
 import org.junit.jupiter.api.Test;
 
-import static com.rbkmoney.mamsel.TerminalPaymentUtil.getTerminalPaymentProviderName;
-import static com.rbkmoney.mamsel.util.TestConstants.EMPTY;
-import static com.rbkmoney.mamsel.util.TestConstants.REF;
+import static dev.vality.mamsel.TerminalPaymentUtil.getTerminalPaymentProviderName;
+import static dev.vality.mamsel.util.TestConstants.EMPTY;
+import static dev.vality.mamsel.util.TestConstants.REF;
 import static org.junit.jupiter.api.Assertions.*;
 
 class TerminalPaymentUtilTest {

@@ -7,7 +7,6 @@ import dev.vality.damsel.domain.PaymentTool;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
-import static dev.vality.mamsel.CryptoCurrencyUtil.getCryptoCurrencyName;
 import static dev.vality.mamsel.util.TestConstants.EMPTY;
 import static dev.vality.mamsel.util.TestConstants.REF;
 import static org.junit.jupiter.api.Assertions.*;
@@ -42,7 +41,8 @@ class CryptoCurrencyUtilTest {
 
         commerce.setCryptoCurrency(null);
         commerce.setCryptoCurrencyDeprecated(LegacyCryptoCurrency.bitcoin);
-        Assertions.assertEquals(LegacyCryptoCurrency.bitcoin.name(), CryptoCurrencyUtil.getCryptoCurrencyName(commerce));
+        Assertions.assertEquals(LegacyCryptoCurrency.bitcoin.name(),
+                CryptoCurrencyUtil.getCryptoCurrencyName(commerce));
 
         commerce.setCryptoCurrency(new CryptoCurrencyRef(REF));
         commerce.setCryptoCurrencyDeprecated(LegacyCryptoCurrency.bitcoin);

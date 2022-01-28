@@ -26,7 +26,8 @@ class DigitalWalletProviderUtilTest {
 
         wallet.setPaymentService(null);
         wallet.setProviderDeprecated(LegacyDigitalWalletProvider.rbkmoney);
-        Assertions.assertEquals(LegacyDigitalWalletProvider.rbkmoney.name(), DigitalWalletUtil.getDigitalWalletName(wallet));
+        Assertions.assertEquals(LegacyDigitalWalletProvider.rbkmoney.name(),
+                DigitalWalletUtil.getDigitalWalletName(wallet));
 
         wallet.setPaymentService(new PaymentServiceRef(REF));
         wallet.setProviderDeprecated(LegacyDigitalWalletProvider.rbkmoney);
@@ -56,7 +57,8 @@ class DigitalWalletProviderUtilTest {
         );
         Assertions.assertEquals(
                 LegacyDigitalWalletProvider.rbkmoney.name(),
-                DigitalWalletUtil.getDigitalWalletName(new PaymentServiceRef(EMPTY), LegacyDigitalWalletProvider.rbkmoney)
+                DigitalWalletUtil.getDigitalWalletName(
+                        new PaymentServiceRef(EMPTY), LegacyDigitalWalletProvider.rbkmoney)
         );
     }
 }

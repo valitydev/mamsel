@@ -7,11 +7,11 @@
     <parent>
         <groupId>dev.vality</groupId>
         <artifactId>library-parent-pom</artifactId>
-        <version>1.0.0</version>
+        <version>1.0.2</version>
     </parent>
 
     <artifactId>mamsel</artifactId>
-    <version>0.2.1</version>
+    <version>0.2.2</version>
     <packaging>jar</packaging>
 
     <description>utility lib to help with damsel migration</description>
@@ -37,19 +37,19 @@
         <dependency>
             <groupId>dev.vality</groupId>
             <artifactId>damsel</artifactId>
-            <version>1.538-5addc41</version>
+            <version>1.557-318a7a6</version>
             <scope>provided</scope>
         </dependency>
         <dependency>
             <groupId>dev.vality.woody</groupId>
             <artifactId>woody-thrift</artifactId>
-            <version>1.0.3</version>
+            <version>1.0.4</version>
             <scope>provided</scope>
         </dependency>
         <dependency>
             <groupId>dev.vality</groupId>
             <artifactId>fistful-proto</artifactId>
-            <version>1.132-ef0d767</version>
+            <version>1.145-c45166d</version>
             <scope>provided</scope>
         </dependency>
 

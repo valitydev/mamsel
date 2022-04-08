@@ -79,39 +79,4 @@ class PaymentSystemUtilTest {
                 getPaymentSystemName(new PaymentSystemRef(EMPTY), LegacyBankCardPaymentSystem.ebt)
         );
     }
-
-    @Test
-    void getFistfulPaymentSystemNameTest() {
-        assertNull(PaymentSystemUtil.getFistfulPaymentSystemName(null, null));
-        assertNull(PaymentSystemUtil.getFistfulPaymentSystemName(new dev.vality.fistful.base.PaymentSystemRef(),
-                null));
-        assertNull(PaymentSystemUtil
-                .getFistfulPaymentSystemName(new dev.vality.fistful.base.PaymentSystemRef(EMPTY),
-                        null));
-        assertEquals(
-                REF,
-                PaymentSystemUtil.getFistfulPaymentSystemName(new dev.vality.fistful.base.PaymentSystemRef(REF),
-                        null)
-        );
-        assertEquals(
-                REF,
-                PaymentSystemUtil.getFistfulPaymentSystemName(new dev.vality.fistful.base.PaymentSystemRef(REF),
-                        dev.vality.fistful.base.LegacyBankCardPaymentSystem.ebt)
-        );
-        assertEquals(
-                LegacyBankCardPaymentSystem.ebt.name(),
-                PaymentSystemUtil.getFistfulPaymentSystemName(null,
-                        dev.vality.fistful.base.LegacyBankCardPaymentSystem.ebt)
-        );
-        assertEquals(
-                LegacyBankCardPaymentSystem.ebt.name(),
-                PaymentSystemUtil.getFistfulPaymentSystemName(new dev.vality.fistful.base.PaymentSystemRef(),
-                        dev.vality.fistful.base.LegacyBankCardPaymentSystem.ebt)
-        );
-        assertEquals(
-                LegacyBankCardPaymentSystem.ebt.name(),
-                PaymentSystemUtil.getFistfulPaymentSystemName(new dev.vality.fistful.base.PaymentSystemRef(EMPTY),
-                        dev.vality.fistful.base.LegacyBankCardPaymentSystem.ebt)
-        );
-    }
 }
